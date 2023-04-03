@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Video Calling App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Video Calling App</h1>
+    <div id="options">
+      <button id="host" onclick="hostCall()">Host a Call</button>
+      <button id="join" onclick="joinCall()">Join a Call</button>
+    </div>
+    <div id="hosting" hidden>
+      <p>Your unique ID is: <span id="uid"></span></p>
+      <button id="copy" onclick="copyID()">Copy ID</button>
+      <p>Share this ID with the person you want to call.</p>
+      <video id="localVideo" autoplay muted></video>
+    </div>
+    <div id="joining" hidden>
+      <p>Enter the unique ID of the host:</p>
+      <input type="text" id="jid" placeholder="Enter ID here">
+      <button id="connect" onclick="connectCall()">Connect</button>
+      <video id="remoteVideo" autoplay></video>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
